@@ -1,7 +1,7 @@
-require("dotenv").config();
+
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_CONNECTION_URL);
+mongoose.connect('mongodb://127.0.0.1/Pizza-db);
 
 const db = mongoose.connection;
 
