@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 7000;
+
 const app = express();
 const path = require("path");
 const pizzasRoute = require("./routes/pizzasRoute");
@@ -22,7 +22,7 @@ app.get("*", function (req, res) {
 app.get("/", function (req, res) {
   return res.end("hello");
 });
-
+const port = process.env.PORT || 7000;
 app.listen(port, function (err) {
   if (err) {
     console.log("error in connecting to express server", err);
